@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   flakeDir = "/etc/nixos"; 
@@ -13,7 +13,7 @@ in {
 
       hms = "home-manager switch --flake ${flakeDir}";
 
-      conf = "nvim ${flakeDir}/configuration.nix";
+      conf = "sudo -E nvim ${flakeDir}/configuration.nix";
       pkgs = "nvim ${flakeDir}/modules/sistema/packages.nix";
 
       ll = "ls -l";
@@ -32,7 +32,7 @@ in {
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" ];
+      plugins = [ "git" "sudo" "colored-man-pages" "history" ];
       theme = "agnoster"; # outros: robbyrussell, af-magic, bira, etc
     };
     plugins = [
@@ -42,6 +42,9 @@ in {
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
+    initExtra = ''
+      [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+    '';
   };
 }
 

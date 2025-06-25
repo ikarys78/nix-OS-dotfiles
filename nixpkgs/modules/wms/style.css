@@ -1,0 +1,27 @@
+*{
+	border: none;
+	font-family: 'JetBrainsMono Nerd Font';
+	font-size: 14px;	
+	color: #ffffff;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}	
+window#waybar{
+	background: #000000;	
+	border: 2px solid #6d7178; 
+	margin: 6px;
+  border-radius: 5px;
+}
+#custom-arch,
+#workspaces,
+#clock {
+	color: #ffffff;
+	margin-left: 5px;
+	margin-right: 10px;
+	padding-right: 10px;
+	padding-left: 5px;
+}
+#temperature, #network{
+	padding-right:10px;
+}
+
+

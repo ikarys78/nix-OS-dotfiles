@@ -16,6 +16,8 @@
     htop
     yazi
     neovim
+    rofi
+    wofi
   ];
 }
 

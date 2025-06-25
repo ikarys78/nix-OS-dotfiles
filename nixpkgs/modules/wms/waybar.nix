@@ -8,8 +8,8 @@
       layer = "top";
       height = 28;
       width = 1595;
-      margin = 5;
-
+      margin-top = 5;
+    
       modules-left = [ "custom/arch" "hyprland/workspaces" "memory" ];
       modules-center = [ "clock" ];
       modules-right = [ "temperature" "network" ];
@@ -20,9 +20,9 @@
       };
 
       clock = {
-        format = "<span color='#ffffff'>{:%H:%M}</span>";
-        format-alt = "<span foreground='#b69bf1'> {:%H:%M:%S}</span>";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt>{:%A, %d}</tt>";
+        format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'>󰥔</span>  {:%R}";
+        format-alt = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'>󰥔</span>  {:%A, %d. %b, %Y}";
+        tooltip = false;
       };
 
       "hyprland/workspaces" = {
@@ -67,10 +67,7 @@
         on-click = "kitty btop";
       };
     }];
-
-    style = ''
-      @import "${config.home.homeDirectory}/.config/waybar/style.css";
-    '';
+    style = builtins.readFile ./style.css;
   };
 }
 

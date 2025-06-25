@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs,  lib, ... }:
 
 {
   home.username = "icaro";
@@ -6,36 +6,26 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   imports = [
-   # ./modules/wms/hyprland.nix
+    ./modules/wms/hyprland.nix
     ./modules/wms/waybar.nix
     ./modules/zsh.nix
+    ./modules/rofi.nix
+    ./modules/kitty/kitty.nix
   ];
-  wayland.windowManager.hyprland.enable = true;
-  programs.zsh = {
-    enable = true;
-
-    shellAliases = {
-      rebuild = "sudo nixos-rebuild switch";
-    };
-
-    oh-my-zsh = {
-      enable = true;
-      theme = "minimal"; # sem tema, usar powerlevel10k diretam>
-      plugins = [
-        "git"
-        "z" 
-        "sudo" 
-        "colored-man-pages" 
-        "history"
-      ];
-    };
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Adwaita";
+    size = 24;
+    package = pkgs.adwaita-icon-theme;
   };
+    home.sessionVariables = {
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";
+  };
+  wayland.windowManager.hyprland.enable = true;
 
   home.file = {
-    ".local/share/zsh/zsh-autosuggestions".source =
-      "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions";
-    ".local/share/zsh/zsh-fast-syntax-highlighting".source =
-      "$.local/share/zsh/zsh-fast-syntax-highlighting}/share;zsh/site-functions";
     
   };
 
