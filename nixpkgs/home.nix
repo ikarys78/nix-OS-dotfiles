@@ -11,6 +11,7 @@
     ./modules/zsh.nix
     ./modules/rofi.nix
     ./modules/kitty/kitty.nix
+    ./modules/git.nix
   ];
   home.pointerCursor = {
     gtk.enable = true;

@@ -10,7 +10,6 @@
     neofetch
     firefox
     killall
-    #adwaita-icon-theme
     oh-my-zsh
     grim
     htop
@@ -18,6 +17,7 @@
     neovim
     rofi
     wofi
+    fastfetch
   ];
 }
 
