@@ -12,6 +12,8 @@
     ./modules/rofi.nix
     ./modules/kitty/kitty.nix
     ./modules/git.nix
+    ./modules/fastfetch/default.nix
+    ./modules/btop/btop.nix
   ];
   home.pointerCursor = {
     gtk.enable = true;

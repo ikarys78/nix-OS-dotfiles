@@ -18,6 +18,16 @@
     rofi
     wofi
     fastfetch
+    xfce.thunar
+    btop
+    vscodium
+    prismlauncher
+    python3
+    gcc
+    jetbrains.pycharm-community-bin
+    cava
+    cmatrix
+    peaclock
   ];
 }
 

@@ -12,16 +12,16 @@
     
       modules-left = [ "custom/arch" "hyprland/workspaces" "memory" ];
       modules-center = [ "clock" ];
-      modules-right = [ "temperature" "network" ];
+      modules-right = [ "network" "pulseaudio"];
 
       "custom/arch" = {
-        format = "  ";
+        format = "<span font='Hack Nerd Font' size='large' rise='-1500'></span>";
         on-click = "sh ~/.config/hypr/rofi-launcher.sh";
       };
 
       clock = {
-        format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'>󰥔</span>  {:%R}";
-        format-alt = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'>󰥔</span>  {:%A, %d. %b, %Y}";
+        format = "{:%R}";
+        format-alt = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'></span>  {:%A, %d. %b, %Y}";
         tooltip = false;
       };
 
@@ -63,8 +63,13 @@
       };
 
       memory = {
-        format = "<span foreground='#ffffff'></span> {used} / {total}";
+        format = "<span font='Hack Nerd Font' size='large' foreground='#ffffff'>󰍛 </span> {used} Gb";
+        #formar = "<span font='Hack Nerd Font' size='large' rise='-1500'color='#ff ffff'>󰍛</span> {used}%";
         on-click = "kitty btop";
+      };
+      pulseaudio = {
+        format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'></span>  <span rise='-200'>{volume}%</span>";
+        tooltip = false;
       };
     }];
     style = builtins.readFile ./style.css;
