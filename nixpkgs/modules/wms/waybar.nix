@@ -159,6 +159,9 @@
 
 {
   xdg.configFile."waybar/config".source =
-    ./wms/waybar/config;
+    ./waybar/config;
+  
+  xdg.configFile."waybar/style.css".source =
+    ./style.css;
 }
 
