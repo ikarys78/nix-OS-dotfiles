@@ -1,45 +1,50 @@
 {
-  description = "Your new nix config";
+  description = "Your new nix config with chaotic-nyx";
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # Home manager
+    # Nixpkgs oficial (instável)
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # Kernel Chaotic-Nyx com overlay, cache e registry
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    # Home Manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Hyprland (opcional, se você realmente usar)
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-  in {
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
+  outputs = { self, nixpkgs, home-manager, chaotic, ... }@inputs: {
     nixosConfigurations = {
-      # FIXME replace with your hostname
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        # > Our main nixos configuration file <
-        modules = [./configuration.nix];
+        system = "x86_64-linux";
+
+        modules = [
+          ./configuration.nix
+
+          # Adiciona overlay do kernel Chaotic-Nyx
+          chaotic.nixosModules.nyx-overlay
+
+          # Usa o cache binário oficial do kernel (Cachix)
+          chaotic.nixosModules.nyx-cache
+
+          # Adiciona entrada automática no nix registry (opcional)
+          chaotic.nixosModules.nyx-registry
+        ];
       };
     };
 
-    # Standalone home-manager configuration entrypoint
-    # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      # FIXME replace with your username@hostname
       "icaro@nixos" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-	      extraSpecialArgs = {inherit inputs outputs;};
-        # > Our main home-manager configuration file <
-        modules = [./nixpkgs/home.nix];
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./nixpkgs/home.nix ];
       };
     };
+
     apps.x86_64-linux.homeManager = home-manager.packages.x86_64-linux.home-manager;
   };
 }
+

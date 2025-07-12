@@ -8,7 +8,7 @@
         color = "white";
         separator = "    ";
       };
-      logo.source = ./images.png;
+      logo.source = ./icon.png;
       modules = [
         {
           type = "custom";

@@ -33,7 +33,7 @@ in {
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "sudo" "colored-man-pages" "history" ];
-      theme = "agnoster"; # outros: robbyrussell, af-magic, bira, etc
+      #theme = "agnoster";  
     };
     plugins = [
       {
@@ -41,9 +41,19 @@ in {
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
+      {
+        name = "zsh-autosuggestions";
+        src = pkgs.zsh-autosuggestions;
+      }
+      {
+        name = "zsh-syntax-highlighting";
+        src = pkgs.zsh-syntax-highlighting;
+      }
     ];
     initExtra = ''
       [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+      source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+      source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     '';
   };
 }

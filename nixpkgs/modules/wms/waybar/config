@@ -1,0 +1,72 @@
+[
+  {
+    "clock": {
+      "format": "{:%R}",
+      "format-alt": "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'></span>  {:%A, %d. %b, %Y}",
+      "tooltip": false
+    },
+    "custom/arch": {
+      "format": "<span font='Hack Nerd Font' size='large' rise='-1500'></span>",
+      "on-click": "sh ~/.config/hypr/rofi-launcher.sh"
+    },
+    "height": 28,
+    "hyprland/workspaces": {
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+        "1": "1",
+        "10": "1〇",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9"
+      },
+      "on-click": "activate",
+      "persistent_workspaces": {
+        "1": [],
+        "10": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": []
+      }
+    },
+    "layer": "top",
+    "margin-top": 5,
+    "memory": {
+      "format": "<span font='Hack Nerd Font' size='large' foreground='#ffffff'>󰍛 </span> {used} Gb",
+      "on-click": "kitty btop"
+    },
+    "modules-center": [
+      "clock"
+    ],
+    "modules-left": [
+      "custom/arch",
+      "hyprland/workspaces",
+      "memory"
+    ],
+    "modules-right": [
+      "network",
+      "pulseaudio"
+    ],
+    "network": {
+      "format": "{ifname}",
+      "format-ethernet": " ",
+      "interface": "enp2s0",
+      "on-click": "kitty nmtui"
+    },
+    "pulseaudio": {
+      "format": "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'></span>  <span rise='-200'>{volume}%</span>",
+      "tooltip": false
+    },
+    "width": 1595
+  }
+]

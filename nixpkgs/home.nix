@@ -26,6 +26,7 @@
     XCURSOR_THEME = "Bibata-Modern-Ice";
     XCURSOR_SIZE = "24";
   };
+  
   wayland.windowManager.hyprland.enable = true;
 
   home.file = {

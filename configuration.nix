@@ -20,9 +20,18 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+    
+  boot = {
+    kernel.sysctl = {
+      "vm.swappiness" = 20;
+      "vm,dirty_background_ratio" = 2;
+      "vm.dirty_ratio" = 5;
+      "vm.vfs_cache_pressure" = 25;
+    };
+  };
+
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -31,14 +40,21 @@
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "pt_BR.UTF-8";
   programs.zsh.enable = true;
-
+  
+  services.journald.extraConfig = ''
+    MaxFileSize=10M
+    MaxUse=100M
+  '';
+  nixpkgs.config.allowUnfree = true;
   swapDevices = [
-    { device = "/swapfile"; }
+    { 
+      device = "/swapfile"; 
+      size = 16384;
+    }
   ];
   programs.hyprland = {
     enable = true;
   }; 
-
   security.sudo.enable = true;
   security.sudo.wheelNeedsPassword = false;
   
