@@ -1,4 +1,4 @@
-{ config, ... } :{
+{ config, pkgs, ... } :{
 
   nixpkgs.config.packagesOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.overrride {enableHybridCodec = true;};

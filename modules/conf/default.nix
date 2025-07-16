@@ -1,4 +1,4 @@
-# ./modules/conf/default.nix
+# /etc/nixos/modules/conf/default.nix
 [
   ./boot.nix
   ./cpu-power.nix

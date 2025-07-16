@@ -6,9 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    (import ./modules/conf) ++ [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/conf
       ./modules/sistema/hyprland.nix
       ./modules/sistema/audio.nix
       ./modules/sistema/packages.nix

@@ -1,4 +1,4 @@
-{configs, ...}:
+{configs, pkgs, ...}:
 {
   users.users.icaro = {
     isNormalUser = true;
