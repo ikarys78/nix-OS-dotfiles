@@ -15,7 +15,7 @@
     htop
     yazi
     neovim
-    rofi
+    rofi-wayland
     wofi
     fastfetch
     xfce.thunar
@@ -34,7 +34,6 @@
     pipewire
     slurp
     swappy
-
     # para a contrução do lfs:
   
     #gnumake

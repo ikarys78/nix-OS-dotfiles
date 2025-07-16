@@ -27,8 +27,8 @@
     XCURSOR_SIZE = "24";
   };
   
-  wayland.windowManager.hyprland.enable = true;
-
+  #wayland.windowManager.hyprland.enable = true;
+  #mods.hyprland.enable = true;
   home.file = {
     
   };

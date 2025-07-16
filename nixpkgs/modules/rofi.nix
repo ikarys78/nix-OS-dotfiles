@@ -5,7 +5,7 @@
     enable = true;
     package = pkgs.rofi;  # usa o rofi padrão com GTK (e drun)
     extraConfig = {
-      modi = "drun,run,window";
+      modi = "drun";
       show-icons = true;
       terminal = "kitty"; # ou o terminal que você usa
     };

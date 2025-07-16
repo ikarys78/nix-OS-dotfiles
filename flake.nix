@@ -20,17 +20,14 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
 
-          # Adiciona overlay do kernel Chaotic-Nyx
           chaotic.nixosModules.nyx-overlay
 
-          # Usa o cache binário oficial do kernel (Cachix)
           chaotic.nixosModules.nyx-cache
 
-          # Adiciona entrada automática no nix registry (opcional)
           chaotic.nixosModules.nyx-registry
         ];
       };
