@@ -1,3 +1,4 @@
+# ./modules/conf/default.nix
 [
   ./boot.nix
   ./cpu-power.nix
