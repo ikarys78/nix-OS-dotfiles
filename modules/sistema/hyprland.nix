@@ -14,8 +14,8 @@
   ];
 
   services.xserver.enable = true;
-  services.xserver.layout = "br";
-  services.xserver.xkbVariant = "abnt2";
+  services.xserver.xkb.layout = "br";
+  services.xserver.xkb.variant = "abnt2";
   console.keyMap = "br-abnt2";
 }
 

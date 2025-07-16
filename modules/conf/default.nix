@@ -6,4 +6,5 @@
   ./journald.nix
   ./network.nix
   ./nix.nix
+  ./time.nix
 ]
