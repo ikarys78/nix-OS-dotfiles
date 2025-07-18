@@ -11,6 +11,8 @@
     xdg-utils 
     xdg-desktop-portal-hyprland
     hyprpaper  
+    wlogout
+    swaylock
   ];
 
   services.xserver.enable = true;

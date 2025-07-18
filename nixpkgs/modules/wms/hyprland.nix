@@ -1,4 +1,5 @@
 # SEGUNDO RICE
+{ config, pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -54,21 +55,15 @@
 
 
       bind = [
-        #"windows, 1, 3, myBezier,"
-        #"windowsOut, 1, 5, default, popin 80%,"
-        #"border, 1, 10, default,"
-        #"fade, 1, 5, default,"
-        #" workspaces, 1, 4, noBounce, slide,"
 	      "SUPER, C, killactive,"
         "SUPER, Q, exec, kitty"
-        "SUPER, M, exit,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
         "$mainMod, R, exec, wofi --show drun,"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
-        #"$mainMod, L, exec, grim ~/Imagens/screenshots/screenshot_$(date +%F).png"
         "$mainMod, L, exec, zsh -c 'grim -g \"$(slurp)\" ~/Imagens/screenshots/screenshot.png'"
+        "$mainMod, M, exec, wlogout"
         "$mainMod, left,  movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up,    movefocus, u"

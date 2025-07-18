@@ -34,6 +34,7 @@
     pipewire
     slurp
     swappy
+    nix-output-monitor
     # para a contrução do lfs:
   
     #gnumake
