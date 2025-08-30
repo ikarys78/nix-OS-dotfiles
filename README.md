@@ -11,7 +11,7 @@ A modular, fast and productivity-oriented setup.
 
 ---
 ## 📸 Screenshots
-![teste] (assets/screenshot.png)
+! [teste] (assets/screenshot.png)
 
 ---
 ## ✨ Main Components
