@@ -10,16 +10,7 @@ My personal **NixOS dotfiles**, powered by **flakes** and **home-manager**, runn
 A modular, fast and productivity-oriented setup.  
 
 ---
-## 📸 Screenshots
 
-![teste](assets/tela_inicial.webp)
----
-![coisas](assets/coisas.webp)
----
-![coisas2](assets/coisas2.png)
----
-![nvim](assets/nvim.webp)
----
 ## ✨ Main Components
 
 - **OS**: [NixOS](https://nixos.org/) (flakes + home-manager)  
@@ -75,6 +66,17 @@ Apply with Home Manager:
 ```bash
 home-manager switch --flake ~/.dotfiles
 ```
+
+## 📸 Screenshots
+
+![teste](assets/tela_inicial.webp)
+---
+![coisas](assets/coisas.webp)
+---
+![coisas2](assets/coisas2.png)
+---
+![nvim](assets/nvim.webp)
+---
 Clone the repository:
 
 ```bash
