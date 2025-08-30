@@ -7,4 +7,5 @@
   ./git.nix
   ./rofi.nix
   ./zsh.nix
+  ./wms/hyprpkgs.nix
 ]

@@ -91,7 +91,7 @@
     
       modules-left = [ "custom/arch" "memory" ];
       modules-center = [ "hyprland/workspaces" ];
-      modules-right = [ "network" "pulseaudio"];
+      modules-right = [ "network" "pulseaudio" "custom/notification"];
 
       "custom/arch" = {
         format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#d79921'></span>";
@@ -118,7 +118,26 @@
           "*" = 5;
         };
       };
-
+      "custom/notification" = {
+        tooltip = false;
+        format = "{icon}";
+        format-icons = {
+          notification = "<span foreground='#fbf1c7'><sup></sup></span>";
+          none = "";
+          dnd-notification = "<span foreground='#fbf1c7'><sup></sup></span>";
+          dnd-none = "";
+          inhibited-notification = "<span foreground='#fbf1c7'><sup></sup></span>";
+          inhibited-none = "";
+          dnd-inhibited-notification = "<span foreground='#fbf1c7'><sup></sup></span>";
+          dnd-inhibited-none = "";
+        };
+        return-type = "json";
+        exec-if = "which swaync-client";
+        exec = "swaync-client -swb";
+        on-click = "swaync-client -t -sw";
+        on-click-right = "swaync-client -d -sw";
+        escape = true;        
+      };
       network = {
         interface = "enp2s0";
         format = "{ifname}";
