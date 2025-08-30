@@ -48,6 +48,8 @@ A modular, fast and productivity-oriented setup.
 │       ├── wms/           # Hyprland ecosystem (idle, lock, waybar, swaync, tofi)
 │       └── zsh.nix
 └── README.md
+```
+---
 
 ## 🚀 Installation
 
