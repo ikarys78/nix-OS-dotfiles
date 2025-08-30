@@ -10,7 +10,10 @@ My personal **NixOS dotfiles**, powered by **flakes** and **home-manager**, runn
 A modular, fast and productivity-oriented setup.  
 
 ---
+## 📸 Screenshots
+! [teste](assets/screenshot.png)
 
+---
 ## ✨ Main Components
 
 - **OS**: [NixOS](https://nixos.org/) (flakes + home-manager)  
