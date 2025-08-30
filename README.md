@@ -11,7 +11,7 @@ A modular, fast and productivity-oriented setup.
 
 ---
 ## 📸 Screenshots
-! [teste] (assets/screenshot.png)
+![Tela inicial](screenshots/tela_inicial.png)
 
 ---
 ## ✨ Main Components
@@ -56,6 +56,19 @@ A modular, fast and productivity-oriented setup.
 
 ## 🚀 Installation
 
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-username>/<repo>.git ~/.dotfiles
+cd ~/.dotfiles
+```
+
+Apply with Home Manager:
+
+```bash
+home-manager switch --flake ~/.dotfiles
+```
 Clone the repository:
 
 ```bash
