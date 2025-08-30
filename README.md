@@ -63,7 +63,7 @@ A modular, fast and productivity-oriented setup.
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/<repo>.git ~/.dotfiles
+git clone https://github.com/ikarys78/nix-OS-dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
@@ -75,5 +75,5 @@ home-manager switch --flake ~/.dotfiles
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/<repo>.git ~/.dotfiles
+git clone https://github.com/ikarys78/nix-OS-dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
