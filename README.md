@@ -14,7 +14,7 @@ A modular, fast and productivity-oriented setup.
 
 ![teste](assets/tela_inicial.webp)
 ![coisas](assets/coisas.webp)
-![coisas2](assets/coisas2.webp)
+![coisas2](assets/coisas2.png)
 ![nvim](assets/nvim.webp)
 ---
 ## ✨ Main Components
