@@ -13,8 +13,11 @@ A modular, fast and productivity-oriented setup.
 ## 📸 Screenshots
 
 ![teste](assets/tela_inicial.webp)
+---
 ![coisas](assets/coisas.webp)
+---
 ![coisas2](assets/coisas2.png)
+---
 ![nvim](assets/nvim.webp)
 ---
 ## ✨ Main Components
