@@ -11,7 +11,7 @@ A modular, fast and productivity-oriented setup.
 
 ---
 ## 📸 Screenshots
-![Tela inicial](screenshots/tela_inicial.png)
+![teste](assets/tela_inicial.webp)
 
 ---
 ## ✨ Main Components
