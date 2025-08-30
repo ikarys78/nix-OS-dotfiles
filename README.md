@@ -66,6 +66,7 @@ Apply with Home Manager:
 ```bash
 home-manager switch --flake ~/.dotfiles
 ```
+---
 
 ## 📸 Screenshots
 
@@ -77,8 +78,4 @@ home-manager switch --flake ~/.dotfiles
 ---
 ![nvim](assets/nvim.webp)
 ---
-Clone the repository:
 
-```bash
-git clone https://github.com/ikarys78/nix-OS-dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
