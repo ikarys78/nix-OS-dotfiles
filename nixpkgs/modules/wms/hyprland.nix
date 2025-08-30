@@ -22,7 +22,7 @@
         gaps_out = 3;
         border_size = 2;
         "col.active_border" = "rgba(a89984ff)";
-        "col.inactive_border" = "rgba(a89984ff)";
+        "col.inactive_border" = "rgba(7c6f64ff)"; #7c6f64;
       };
 
       decoration = {
@@ -34,7 +34,6 @@
           new_optimizations = true;
         };
       };
-
       exec-once = [
         "hyprpaper"
         "waybar"

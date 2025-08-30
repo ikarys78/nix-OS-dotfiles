@@ -11,7 +11,7 @@
       font_family = "JetBrainsMono Nerd Font Mono";
       background_opacity = 0.7;
       font_size = 10.0;
-
+      confirm_os_window_close = 0;
     };
   };
 }

@@ -8,5 +8,5 @@
     tofi
     swaynotificationcenter
     swww
-  ]
+  ];
 }

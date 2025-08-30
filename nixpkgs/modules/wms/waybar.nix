@@ -91,7 +91,7 @@
     
       modules-left = [ "custom/arch" "memory" ];
       modules-center = [ "hyprland/workspaces" ];
-      modules-right = [ "network" "pulseaudio" "custom/notification"];
+      modules-right = [ "custom/notification" "network" ];
 
       "custom/arch" = {
         format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#d79921'></span>";
@@ -123,11 +123,11 @@
         format = "{icon}";
         format-icons = {
           notification = "<span foreground='#fbf1c7'><sup></sup></span>";
-          none = "";
+          none = "<span foreground='#fbf1c7'></span>";
           dnd-notification = "<span foreground='#fbf1c7'><sup></sup></span>";
-          dnd-none = "";
+          dnd-none = "<span foreground='#d79921'</span>";
           inhibited-notification = "<span foreground='#fbf1c7'><sup></sup></span>";
-          inhibited-none = "";
+          inhibited-none = "<span foreground='#d79921'></span>";
           dnd-inhibited-notification = "<span foreground='#fbf1c7'><sup></sup></span>";
           dnd-inhibited-none = "";
         };

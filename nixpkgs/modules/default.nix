@@ -8,4 +8,8 @@
   ./rofi.nix
   ./zsh.nix
   ./wms/hyprpkgs.nix
+  ./wms/swaync.nix
+  ./wms/tofi.nix
+  ./wms/hypridle.nix
+  ./gtk.nix
 ]

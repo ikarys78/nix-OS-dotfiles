@@ -43,6 +43,10 @@ window#waybar{
   color: #fcf1c7;
   font-weight: bold;
 }
+#custom-notification{
+  padding-right:10px;
+  color: #fcf1c7;
+}
 #workspaces button {
   padding: 0px 7px;
   font-weight: bold;
