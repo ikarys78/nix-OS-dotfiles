@@ -68,9 +68,9 @@ home-manager switch --flake ~/.dotfiles
 ```
 ---
 <details>
-  <sumary>Screenshots</sumary>
+
   
-  ## 📸 Screenshots
+  <sumary>## 📸 Screenshots</sumary>
   
   ![teste](assets/tela_inicial.webp)
   ---
