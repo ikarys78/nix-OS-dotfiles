@@ -67,15 +67,17 @@ Apply with Home Manager:
 home-manager switch --flake ~/.dotfiles
 ```
 ---
-
-## 📸 Screenshots
-
-![teste](assets/tela_inicial.webp)
----
-![coisas](assets/coisas.webp)
----
-![coisas2](assets/coisas2.png)
----
-![nvim](assets/nvim.webp)
----
-
+<details>
+  <sumary>Screenshots</sumary>
+  
+  ## 📸 Screenshots
+  
+  ![teste](assets/tela_inicial.webp)
+  ---
+  ![coisas](assets/coisas.webp)
+  ---
+  ![coisas2](assets/coisas2.png)
+  ---
+  ![nvim](assets/nvim.webp)
+  ---
+</details>
