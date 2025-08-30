@@ -100,7 +100,7 @@
 
       clock = {
         format = "{:%R}";
-        format-alt = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'></span>  {:%A, %d. %b, %Y}";
+        format-alt = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#fbf1c7'></span>  {:%A, %d. %b, %Y}";
         tooltip = false;
       };
 

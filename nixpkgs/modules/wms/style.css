@@ -33,9 +33,8 @@ window#waybar{
   color: #fcf1c7;
 }
 #clock{
-  margin-left: 10px;
-  padding-top: 3px;
   font-weight: bold;
+  padding-right: 10px;
 }
 #memory{
   padding-left: 3px;
