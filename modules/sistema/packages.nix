@@ -34,33 +34,15 @@
     pipewire
     slurp
     swappy
-    nix-output-monitor
-    # para a contrução do lfs:
-  
-    #gnumake
-    #bash
-    #binutils
-    #bison
-    #gawk
-    #texinfo
-    #flex
-    #patch
-    #unzip
-    #gnutar
-    #xz
-    #zstd
-    #bzip2
-    #perl
-    #file
-    #wget
-    #curl
-    #rsync
-    #coreutils
-    #findutils
-    #gnugrep
-    #gnused
-    #diffutils
-    #util-linux
+    virtualbox
+    proton-ge-custom
+    steam
+    lutris-free
+    parted
+    bison
+    file
+    wget
+    gimp3
   ];
 }
 

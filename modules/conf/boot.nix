@@ -1,16 +1,36 @@
 { config, liv, pkgs, ...}: {
   #boot configurations
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = false;
+  boot.loader.efi.canTouchEfiVariables = false;
   boot.initrd.includeDefaultModules = false;
-
+  
   boot = {
+    loader.grub = {
+      enable = true;
+      efiSupport = true;
+      efiInstallAsRemovable = true;
+      device = "nodev";
+      
+      extraEntries = ''
+      menuentry "Arch Linux" {
+        search --set=root --fs-uuid 832E-DD0C
+        linux /boot/vmlinuz-linux root=832E-DD0C rw 
+        initrd /boot/initramfs-linux.img
+      }
+      '';
+      
+    };
     kernel.sysctl = {
       "vm.swappiness" = 20;
       "vm.dirty_background_ratio" = 2;
       "vm.dirty_ratio" = 5;
       "vm.vfs_cache_pressure" = 25;
     };
+    kernelModules = [
+      "vboxdrv"
+      "vboxnetadp"
+      "vboxnetflt"
+    ];
     kernelParams = [        
       "zswap.enabled=1"
       "zswap.compressor=lz4"

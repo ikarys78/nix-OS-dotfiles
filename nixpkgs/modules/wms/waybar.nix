@@ -89,12 +89,12 @@
       width = 1595;
       margin-top = 5;
     
-      modules-left = [ "custom/arch" "hyprland/workspaces" "memory" ];
-      modules-center = [ "clock" ];
+      modules-left = [ "custom/arch" "memory" ];
+      modules-center = [ "hyprland/workspaces" ];
       modules-right = [ "network" "pulseaudio"];
 
       "custom/arch" = {
-        format = "<span font='Hack Nerd Font' size='large' rise='-1500'></span>";
+        format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#d79921'></span>";
         on-click = "sh ~/.config/hypr/rofi-launcher.sh";
       };
 
@@ -105,49 +105,34 @@
       };
 
       "hyprland/workspaces" = {
+        active-only = false;
         format = "{icon}";
-        on-click = "activate";
+        tooltip = false;
         all-outputs = true;
-        persistent_workspaces = {
-          "1" = [ ];
-          "2" = [ ];
-          "3" = [ ];
-          "4" = [ ];
-          "5" = [ ];
-          "6" = [ ];
-          "7" = [ ];
-          "8" = [ ];
-          "9" = [ ];
-          "10" = [ ];
-        };
+        color = "rgba(251, 241, 199, 1)";
         format-icons = {
-          "1" = "1";
-          "2" = "2";
-          "3" = "3";
-          "4" = "4";
-          "5" = "5";
-          "6" = "6";
-          "7" = "7";
-          "8" = "8";
-          "9" = "9";
-          "10" = "1〇";
+          active = "<span color='#d79921'></span>";
+          default = "<span color='#fbf1c7'></span>";
+        };
+        persistent-workspaces = {
+          "*" = 5;
         };
       };
 
       network = {
         interface = "enp2s0";
         format = "{ifname}";
-        format-ethernet = " ";
+        format-ethernet = "<span color='#d79921'> </span>";
         on-click = "kitty nmtui";
       };
 
       memory = {
-        format = "<span font='Hack Nerd Font' size='large' foreground='#ffffff'>󰍛 </span> {used} Gb";
+        format = "<span font='Hack Nerd Font' size='large' foreground='#fbf1c7'> </span> {used} Gb";
         #formar = "<span font='Hack Nerd Font' size='large' rise='-1500'color='#ff ffff'>󰍛</span> {used}%";
         on-click = "kitty btop";
       };
       pulseaudio = {
-        format = "<span font='Hack Nerd Font' size='large' rise='-1500' color='#ffffff'></span>  <span rise='-200'>{volume}%</span>";
+        format = "<span font='Hack Nerd Font' size='large' rise='-1500' foreground='#fbf1c7'></span>  <span rise='-200' color='#fbf1c7'>{volume}%</span>";
         tooltip = false;
       };
     }];

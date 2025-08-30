@@ -6,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     hyprland
     waybar 
-    rofi-wayland 
+    rofi-wayland-unwrapped 
     kitty
     xdg-utils 
     xdg-desktop-portal-hyprland

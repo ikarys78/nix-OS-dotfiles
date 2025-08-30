@@ -4,14 +4,11 @@
     intel-vaapi-driver = pkgs.intel-vaapi-driver.overrride {enableHybridCodec = true;};
   };
   # video acelerado
-  hardware.graphics.extraPackages32 = {
-    enable = true;
-    #enable32Bit = true;
-    extraPackages = with pkgs.pkgsi686Linux; [
-      intel-vaapi-driver
-      libvdpau-va-gl
-    ];
-  };
+  hardware.graphics.extraPackages32 = with pkgs.pkgsi686Linux; [
+    intel-vaapi-driver
+    libvdpau-va-gl
+  ];
+
 
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "i965";

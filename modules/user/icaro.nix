@@ -2,7 +2,7 @@
 {
   users.users.icaro = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "render" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "render" "vboxusers" ];
     password = "123";
     shell = pkgs.zsh;
   };

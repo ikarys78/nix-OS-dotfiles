@@ -10,23 +10,23 @@
       input = {
         kb_layout = "br";
 	      kb_variant = "abnt2";
-        sensitivity = 0.5;
+        sensitivity = -0.5;
       };
       env = [
-        "GTK_THEME=Adwaita:dark"
-        "XCURSOR_THEME,Adwaita"
+        #"GTK_THEME=Winsur-dark-cursors"
+        "XCURSOR_THEME,Winsur-dark-cursors"
         "XCURSOR_SIZE,24"
       ]; 
       general = {
         gaps_in = 1;
         gaps_out = 3;
         border_size = 2;
-        "col.active_border" = "rgba(3A333645)";
-        "col.inactive_border" = "rgba(3A333645)";
+        "col.active_border" = "rgba(a89984ff)";
+        "col.inactive_border" = "rgba(a89984ff)";
       };
 
       decoration = {
-        rounding = 4;
+        rounding = 0;
         blur = {
           enabled = true;
           size = 1;
@@ -57,6 +57,7 @@
       bind = [
 	      "SUPER, C, killactive,"
         "SUPER, Q, exec, kitty"
+        # "SUPER, M, exit,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
         "$mainMod, R, exec, wofi --show drun,"
@@ -68,7 +69,7 @@
         "$mainMod, right, movefocus, r"
         "$mainMod, up,    movefocus, u"
         "$mainMod, down,  movefocus, d"
-
+        "$mainMod, Escape, exec, waybar || pkill waybar"
         "$mainMod, 1, workspace, 1"
         "SUPER, 2, workspace, 2"
         "SUPER, 3, workspace, 3"

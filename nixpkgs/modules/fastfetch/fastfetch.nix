@@ -6,10 +6,10 @@
     settings = {
       "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
       display = {
-        color = "white";
+        color = "#fcf1c7";
         separator = "    ";
       };
-      logo.source = ./icon.png;
+      logo.source = ./lain.png;
       modules = [
         {
           type = "custom";

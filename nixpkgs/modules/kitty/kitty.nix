@@ -2,7 +2,7 @@
 {
   programs.kitty = {
     enable = true;
-    themeFile = "adwaita_dark";
+    themeFile = "gruvbox-dark";
 
     settings = {
       bold_font = "JetBrainsMono Nerd Font Mono Extra Bold";

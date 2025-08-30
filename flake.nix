@@ -14,6 +14,9 @@
 
     # Hyprland (opcional, se você realmente usar)
     hyprland.url = "github:hyprwm/Hyprland";
+  
+    #impermanence
+    
   };
 
   outputs = { self, nixpkgs, home-manager, chaotic, ... }@inputs: {
@@ -32,7 +35,7 @@
         ];
       };
     };
-
+    
     homeConfigurations = {
       "icaro@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;

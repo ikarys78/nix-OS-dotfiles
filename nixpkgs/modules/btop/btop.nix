@@ -4,7 +4,7 @@
     enable = true;
 
     settings = {
-      color_theme = "adwaita";
+      color_theme = "gruvbox-dark"; 
       rounded_corners = true;
       update_ms = 500;
       vim_keys = true;
