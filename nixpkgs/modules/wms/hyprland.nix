@@ -10,7 +10,7 @@
       input = {
         kb_layout = "br";
 	      kb_variant = "abnt2";
-        sensitivity = -0.5;
+        sensitivity = -0.7;
       };
       env = [
         #"GTK_THEME=Winsur-dark-cursors"

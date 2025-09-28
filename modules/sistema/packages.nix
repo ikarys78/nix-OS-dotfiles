@@ -43,6 +43,8 @@
     file
     wget
     gimp3
+    nix-output-monitor
+    
   ];
 }
 

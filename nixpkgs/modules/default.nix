@@ -12,4 +12,6 @@
   ./wms/tofi.nix
   ./wms/hypridle.nix
   ./gtk.nix
+  ./pkgs.nix
+  ./nvim/nvim.nix
 ]

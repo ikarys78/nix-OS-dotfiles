@@ -6,8 +6,9 @@
 
   home.stateVersion = "23.11"; # Please read the comment before changing.
   
-  imports = import ./modules;
-  
+  imports = [
+    import ./modules
+  ];
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;

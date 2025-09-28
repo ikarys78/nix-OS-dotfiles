@@ -4,7 +4,6 @@
   inputs = {
     # Nixpkgs oficial (instável)
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
     # Kernel Chaotic-Nyx com overlay, cache e registry
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
@@ -14,12 +13,11 @@
 
     # Hyprland (opcional, se você realmente usar)
     hyprland.url = "github:hyprwm/Hyprland";
-  
-    #impermanence
-    
+    # nvf
   };
 
-  outputs = { self, nixpkgs, home-manager, chaotic, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, chaotic,  ... }@inputs: {
+    
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
